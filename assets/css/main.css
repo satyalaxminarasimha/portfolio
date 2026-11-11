@@ -361,9 +361,71 @@ strong { color: var(--text); font-weight: 600; }
    ========================================================================== */
 .skills {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
 }
+.skill-group--wide { grid-column: span 2; }
+@media (max-width: 900px) {
+  .skills { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .skills { grid-template-columns: 1fr; }
+  .skill-group--wide { grid-column: auto; }
+}
+
+/* ==========================================================================
+   Services
+   ========================================================================== */
+.section__intro {
+  max-width: 620px;
+  margin: -1.5rem 0 2.5rem;
+  font-size: 1.05rem;
+  color: var(--text-muted);
+}
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+.service {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.service__icon { width: 40px; height: 40px; color: var(--accent); margin-bottom: 1.25rem; }
+.service__title { font-size: 1.3rem; margin-bottom: 0.75rem; }
+.service__desc { color: var(--text-muted); font-size: 0.95rem; }
+.service__list { margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--border); }
+.service__list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.45rem;
+  font-size: 0.92rem;
+  color: var(--text);
+}
+.service__list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 600;
+}
+.service--cta {
+  justify-content: center;
+  gap: 1rem;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  transition: background-color 0.25s, transform 0.3s var(--ease);
+}
+.service--cta:hover { background: var(--accent-strong); transform: translateY(-4px); }
+.service__eyebrow { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255, 255, 255, 0.7); }
+.service__cta-title { font-family: var(--font-serif); font-size: 1.75rem; font-weight: 700; line-height: 1.2; }
+.service--cta .link-arrow { color: #fff; }
+.service--cta:hover .link-arrow span { transform: translateX(4px); }
 .skill-group {
   padding: 1.5rem;
   background: var(--bg-elev);
