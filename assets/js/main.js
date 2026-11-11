@@ -1,8 +1,6 @@
 (() => {
   "use strict";
 
-  document.documentElement.classList.add("js");
-
   const header = document.getElementById("header");
   const toggle = document.getElementById("nav-toggle");
   const menu = document.getElementById("nav-menu");
@@ -33,23 +31,8 @@
     if (e.matches) setMenu(false);
   });
 
-  /* ---------- Reveal sections on scroll ---------- */
-  const revealEls = document.querySelectorAll(".reveal");
+  /* ---------- Highlight the active nav link ---------- */
   if ("IntersectionObserver" in window) {
-    const revealObserver = new IntersectionObserver(
-      (entries, obs) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            obs.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
-    );
-    revealEls.forEach((el) => revealObserver.observe(el));
-
-    /* ---------- Highlight the active nav link ---------- */
     const linkFor = (id) => document.querySelector(`.nav__link[href="#${id}"]`);
     const sectionObserver = new IntersectionObserver(
       (entries) => {
@@ -63,8 +46,6 @@
       { rootMargin: "-45% 0px -50% 0px" }
     );
     document.querySelectorAll("main section[id]").forEach((s) => sectionObserver.observe(s));
-  } else {
-    revealEls.forEach((el) => el.classList.add("is-visible"));
   }
 
   /* ---------- Copy email to clipboard ---------- */
