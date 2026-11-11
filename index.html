@@ -1,286 +1,255 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karri Satya Laxmi Narasimha Murthy | Software Engineer</title>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        /* Custom Styles */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0a0a0a; /* A slightly softer black */
-            color: #f1f5f9; /* Slate 100 */
-        }
-        .glass-effect {
-            background: rgba(23, 23, 23, 0.6); /* neutral-900 with opacity */
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .section-fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .section-fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .tech-icon-hover {
-            transition: transform 0.3s ease, filter 0.3s ease;
-        }
-        .tech-icon-hover:hover {
-            transform: scale(1.1);
-            filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.5)); /* Indigo shadow */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karri Satya Laxmi Narasimha Murthy — Software Engineer</title>
+  <meta name="description" content="Software Engineer and Full-Stack Developer building scalable, cloud-ready applications. Specializing in backend systems and machine learning.">
+  <meta name="author" content="Karri Satya Laxmi Narasimha Murthy">
+  <meta name="theme-color" content="#0b0d12">
+
+  <!-- Open Graph / social previews -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Karri Satya Laxmi Narasimha Murthy — Software Engineer">
+  <meta property="og:description" content="Full-stack developer building scalable, cloud-ready applications with a focus on backend systems and machine learning.">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script src="assets/js/main.js" defer></script>
 </head>
-<body class="antialiased selection:bg-indigo-500 selection:text-white">
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Header & Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center glass-effect mt-4 rounded-xl">
-            <a href="#" class="text-xl font-bold text-white">Sathyam</a>
-            <div class="hidden md:flex space-x-8 items-center">
-                <a href="#skills" class="text-slate-300 hover:text-indigo-400 transition-colors duration-300">Skills</a>
-                <a href="#projects" class="text-slate-300 hover:text-indigo-400 transition-colors duration-300">Projects</a>
-                <a href="#experience" class="text-slate-300 hover:text-indigo-400 transition-colors duration-300">Experience</a>
-                <a href="#contact" class="text-slate-300 hover:text-indigo-400 transition-colors duration-300">Contact</a>
-            </div>
-            <a href="sathyam_resume.pdf" download="Sathyam_Resume.pdf" class="hidden md:inline-block bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors duration-300">
-                Download Resume
+  <!-- ============ Header ============ -->
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Primary">
+      <a href="#top" class="nav__logo" aria-label="Home">
+        <span class="nav__logo-mark">S</span>
+        <span class="nav__logo-text">sathyam<span class="accent">.dev</span></span>
+      </a>
+
+      <button class="nav__toggle" id="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li><a href="#skills" class="nav__link"><span class="nav__num">01.</span>Skills</a></li>
+          <li><a href="#projects" class="nav__link"><span class="nav__num">02.</span>Projects</a></li>
+          <li><a href="#experience" class="nav__link"><span class="nav__num">03.</span>Experience</a></li>
+          <li><a href="#contact" class="nav__link"><span class="nav__num">04.</span>Contact</a></li>
+        </ul>
+        <a href="https://drive.google.com/file/d/1HnWIdaNTJExybIdL8uOE5-_eS9PTfDW6/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">Résumé</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ Hero ============ -->
+    <section class="hero container" id="top">
+      <p class="hero__eyebrow mono"><span class="status-dot" aria-hidden="true"></span>Open to new opportunities</p>
+      <h1 class="hero__title">
+        Karri Satya Laxmi<br>Narasimha Murthy.
+      </h1>
+      <p class="hero__subtitle">I build scalable software for the web and beyond.</p>
+      <p class="hero__lead">
+        Software Engineer and Full-Stack Developer. I build scalable, cloud-ready applications
+        and solve complex problems with clean, efficient code &mdash; currently specializing in
+        <strong>backend systems</strong> and <strong>machine learning</strong>.
+      </p>
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--primary">View my work</a>
+        <a href="https://github.com/satyalaxminarasimha" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z"/></svg>
+          GitHub
+        </a>
+      </div>
+
+      <dl class="hero__meta">
+        <div><dt>Focus</dt><dd>Backend &amp; ML</dd></div>
+        <div><dt>Stack</dt><dd>MERN, Java, Python</dd></div>
+        <div><dt>Currently</dt><dd>Freelance Developer</dd></div>
+      </dl>
+    </section>
+
+    <!-- ============ Skills ============ -->
+    <section class="section container reveal" id="skills" aria-labelledby="skills-title">
+      <header class="section__header">
+        <span class="section__num mono">01</span>
+        <h2 class="section__title" id="skills-title">Technical Skills</h2>
+      </header>
+
+      <div class="skills">
+        <article class="skill-group">
+          <h3 class="skill-group__title">Languages</h3>
+          <ul class="tags">
+            <li>Java</li><li>Python</li><li>C++</li><li>JavaScript</li><li>SQL</li>
+          </ul>
+        </article>
+        <article class="skill-group">
+          <h3 class="skill-group__title">Frontend</h3>
+          <ul class="tags">
+            <li>React</li><li>Redux</li><li>HTML5</li><li>CSS3</li>
+          </ul>
+        </article>
+        <article class="skill-group">
+          <h3 class="skill-group__title">Backend &amp; Data</h3>
+          <ul class="tags">
+            <li>Node.js</li><li>Express.js</li><li>REST APIs</li><li>MongoDB</li><li>MySQL</li>
+          </ul>
+        </article>
+        <article class="skill-group">
+          <h3 class="skill-group__title">Cloud, ML &amp; Tools</h3>
+          <ul class="tags">
+            <li>AWS</li><li>TensorFlow</li><li>PyTorch</li><li>Git</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ Projects ============ -->
+    <section class="section container reveal" id="projects" aria-labelledby="projects-title">
+      <header class="section__header">
+        <span class="section__num mono">02</span>
+        <h2 class="section__title" id="projects-title">Selected Projects</h2>
+      </header>
+
+      <div class="projects">
+        <article class="project">
+          <div class="project__top">
+            <svg class="project__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z M9 12l2 2 4-4"/></svg>
+            <a href="https://github.com/satyalaxminarasimha" target="_blank" rel="noopener noreferrer" class="project__link" aria-label="View source for Credit Card Fraud Detection System">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M8 7h9v9"/></svg>
             </a>
-        </nav>
-    </header>
+          </div>
+          <h3 class="project__title">Credit Card Fraud Detection System</h3>
+          <p class="project__desc">
+            A robust backend engine that analyzes transaction patterns in real time. Showcases
+            algorithms, data analysis, and building high-performance systems.
+          </p>
+          <ul class="project__stack mono"><li>Java</li><li>SQL</li><li>Backend</li></ul>
+        </article>
 
-    <main class="container mx-auto px-6">
-        
-        <!-- Hero Section -->
-        <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center">
-            <div class="max-w-3xl">
-                <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-white leading-tight">
-                    Karri Satya Laxmi Narasimha Murthy
-                </h1>
-                <h2 class="mt-4 text-xl md:text-2xl font-medium text-indigo-400">
-                    Software Engineer | Full-Stack Developer | AI & ML Enthusiast
-                </h2>
-                <p class="mt-6 text-lg text-slate-300 max-w-2xl mx-auto">
-                    I build scalable, cloud-ready applications and solve complex problems with clean, efficient code. Currently specializing in backend systems and machine learning.
-                </p>
-                <div class="mt-8 flex justify-center gap-4">
-                    <a href="#projects" class="bg-indigo-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105">
-                        View Projects
-                    </a>
-                    <a href="https://github.com/satyalaxminarasimha" target="_blank" class="bg-slate-800 text-slate-300 px-6 py-3 rounded-lg text-lg font-semibold hover:bg-slate-700 transition-all duration-300 transform hover:scale-105">
-                        GitHub Profile
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Tech Stack Section -->
-        <section id="skills" class="py-20 section-fade-in">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">My Tech Stack</h2>
-            <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 max-w-5xl mx-auto">
-                
-                <!-- Java -->
-                <div class="flex flex-col items-center justify-center gap-2 p-4 bg-neutral-900 rounded-lg tech-icon-hover">
-                    <img src="https://www.vectorlogo.zone/logos/java/java-icon.svg" alt="Java" class="h-12 w-12">
-                    <span class="text-slate-300">Java</span>
-                </div>
-                <!-- Python -->
-                <div class="flex flex-col items-center justify-center gap-2 p-4 bg-neutral-900 rounded-lg tech-icon-hover">
-                    <img src="https://www.vectorlogo.zone/logos/python/python-icon.svg" alt="Python" class="h-12 w-12">
-                    <span class="text-slate-300">Python</span>
-                </div>
-                <!-- C++ -->
-                <div class="flex flex-col items-center justify-center gap-2 p-4 bg-neutral-900 rounded-lg tech-icon-hover">
-                    <img src="https://www.vectorlogo.zone/logos/cplusplus/cplusplus-icon.svg" alt="C++" class="h-12 w-12">
-                    <span class="text-slate-300">C++</span>
-                </div>
-                <!-- JavaScript -->
-                <div class="flex flex-col items-center justify-center gap-2 p-4 bg-neutral-900 rounded-lg tech-icon-hover">
-                    <img src="https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg" alt="JavaScript" class="h-12 w-12">
-                    <span class="text-slate-300">JavaScript</span>
-                </div>
-                <!-- HTML5 -->
-                 <div class="flex flex-col items-center justify-center gap-2 p-4 bg-neutral-900 rounded-lg tech-icon-hover">
-                    <img src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg" alt="HTML5" class="h-12 w-12">
-                    <span class="text-slate-300">HTML5</span>
-                </div>
-                <!-- CSS3 -->
-                <div class="flex flex-col items-center justify-center gap-2 p-4 bg-neutral-900 rounded-lg tech-icon-hover">
-                    <img src="https://www.vectorlogo.zone/logos/w3_css3/w3_css3-icon.svg" alt="CSS3" class="h-12 w-12">
-                    <span class="text-slate-300">CSS3</span>
-                </div>
-                <!-- React -->
-                <div class="flex flex-col items-center justify-center gap-2 p-4 bg-neutral-900 rounded-lg tech-icon-hover">
-                    <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" alt="React" class="h-12 w-12">
-                    <span class="text-slate-300">React</span>
-                </div>
-                <!-- Node.js -->
-                <div class="flex flex-col items-center justify-center gap-2 p-4 bg-neutral-900 rounded-lg tech-icon-hover">
-                    <img src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg" alt="Node.js" class="h-12 w-12">
-                    <span class="text-slate-300">Node.js</span>
-                </div>
-                <!-- Express.js -->
-                <div class="flex flex-col items-center justify-center gap-2 p-4 bg-neutral-900 rounded-lg tech-icon-hover">
-                     <img src="https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg" alt="Express.js" class="h-12 w-12">
-                    <span class="text-slate-300">Express.js</span>
-                </div>
-                <!-- MongoDB -->
-                <div class="flex flex-col items-center justify-center gap-2 p-4 bg-neutral-900 rounded-lg tech-icon-hover">
-                    <img src="https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg" alt="MongoDB" class="h-12 w-12">
-                    <span class="text-slate-300">MongoDB</span>
-                </div>
-                <!-- MySQL -->
-                <div class="flex flex-col items-center justify-center gap-2 p-4 bg-neutral-900 rounded-lg tech-icon-hover">
-                    <img src="https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg" alt="MySQL" class="h-12 w-12">
-                    <span class="text-slate-300">MySQL</span>
-                </div>
-                <!-- AWS -->
-                <div class="flex flex-col items-center justify-center gap-2 p-4 bg-neutral-900 rounded-lg tech-icon-hover">
-                    <img src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg" alt="AWS" class="h-12 w-12">
-                    <span class="text-slate-300">AWS</span>
-                </div>
-                 <!-- TensorFlow -->
-                <div class="flex flex-col items-center justify-center gap-2 p-4 bg-neutral-900 rounded-lg tech-icon-hover">
-                    <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="TensorFlow" class="h-12 w-12">
-                    <span class="text-slate-300">TensorFlow</span>
-                </div>
-                <!-- PyTorch -->
-                <div class="flex flex-col items-center justify-center gap-2 p-4 bg-neutral-900 rounded-lg tech-icon-hover">
-                    <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="PyTorch" class="h-12 w-12">
-                    <span class="text-slate-300">PyTorch</span>
-                </div>
-                <!-- Git -->
-                <div class="flex flex-col items-center justify-center gap-2 p-4 bg-neutral-900 rounded-lg tech-icon-hover">
-                    <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="Git" class="h-12 w-12">
-                    <span class="text-slate-300">Git</span>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="py-20 section-fade-in">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project Card 1 -->
-                <div class="bg-neutral-900 rounded-xl overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 shadow-lg hover:shadow-indigo-500/20">
-                    <img src="https://placehold.co/600x400/0a0a0a/f1f5f9?text=Fraud+Detection" alt="Credit Card Fraud Detection" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Credit Card Fraud Detection System</h3>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-indigo-900 text-indigo-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Java</span>
-                            <span class="bg-slate-700 text-slate-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">SQL</span>
-                            <span class="bg-slate-700 text-slate-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Backend</span>
-                        </div>
-                        <p class="text-slate-400 mb-4 text-sm">A robust backend engine to analyze transaction patterns in real-time. Showcases skills in algorithms, data analysis, and building high-performance systems.</p>
-                        <a href="https://github.com/satyalaxminarasimha" target="_blank" class="text-indigo-400 font-semibold hover:underline">View Code &rarr;</a>
-                    </div>
-                </div>
-                <!-- Project Card 2 -->
-                <div class="bg-neutral-900 rounded-xl overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 shadow-lg hover:shadow-indigo-500/20">
-                    <img src="https://placehold.co/600x400/0a0a0a/f1f5f9?text=ERP+System" alt="ERP System" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Full-Stack ERP System</h3>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-indigo-900 text-indigo-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">React</span>
-                            <span class="bg-slate-700 text-slate-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Node.js</span>
-                            <span class="bg-slate-700 text-slate-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">MongoDB</span>
-                        </div>
-                        <p class="text-slate-400 mb-4 text-sm">A scalable, full-stack Enterprise Resource Planning app with real-time inventory tracking, automated reporting, and secure JWT authentication.</p>
-                        <a href="https://github.com/satyalaxminarasimha" target="_blank" class="text-indigo-400 font-semibold hover:underline">View Code &rarr;</a>
-                    </div>
-                </div>
-                <!-- Project Card 3 -->
-                <div class="bg-neutral-900 rounded-xl overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 shadow-lg hover:shadow-indigo-500/20">
-                    <img src="https://placehold.co/600x400/0a0a0a/f1f5f9?text=QR+Generator" alt="QR Code Generator" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">QR Code Generator</h3>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-indigo-900 text-indigo-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Python</span>
-                            <span class="bg-slate-700 text-slate-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Tkinter</span>
-                            <span class="bg-slate-700 text-slate-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">GUI</span>
-                        </div>
-                        <p class="text-slate-400 mb-4 text-sm">A user-friendly desktop application with a GUI built using Tkinter. A practical tool that demonstrates the ability to quickly build helpful solutions.</p>
-                        <a href="https://github.com/satyalaxminarasimha" target="_blank" class="text-indigo-400 font-semibold hover:underline">View Code &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="py-20 section-fade-in">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Professional Experience</h2>
-            <div class="max-w-2xl mx-auto">
-                <div class="relative border-l-2 border-slate-700 pl-8 space-y-12">
-                     <!-- Timeline Item 1 -->
-                    <div class="relative">
-                        <div class="absolute -left-[42px] top-1 h-4 w-4 rounded-full bg-indigo-500"></div>
-                        <p class="text-sm text-slate-400">May 2025 – Present</p>
-                        <h3 class="text-xl font-bold mt-1">Freelance Software Developer (MERN Stack)</h3>
-                        <p class="mt-2 text-slate-300">Developed and maintained a web-based ERP system, focusing on secure RESTful APIs and robust frontend state management with Redux.</p>
-                    </div>
-                     <!-- Timeline Item 2 -->
-                    <div class="relative">
-                        <div class="absolute -left-[42px] top-1 h-4 w-4 rounded-full bg-indigo-500"></div>
-                        <p class="text-sm text-slate-400">July 2022 – Jan 2023</p>
-                        <h3 class="text-xl font-bold mt-1">Java Developer Intern @ SV IT Solutions</h3>
-                        <p class="mt-2 text-slate-300">Built and tested core components for a high-transaction fraud detection system using Java and JSP, optimizing performance and reducing alert review times.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-         <!-- Contact Section -->
-        <section id="contact" class="py-20 text-center section-fade-in">
-            <h2 class="text-3xl md:text-4xl font-bold">Get In Touch</h2>
-            <p class="mt-4 text-lg text-slate-300 max-w-xl mx-auto">I'm always open to discussing new opportunities and collaborations. Feel free to reach out!</p>
-            <a href="mailto:k.sathyam2003@gmail.com" class="mt-8 inline-block bg-indigo-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105">
-                k.sathyam2003@gmail.com
+        <article class="project">
+          <div class="project__top">
+            <svg class="project__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16v4H4zM4 11h7v8H4zM13 11h7v8h-7z"/></svg>
+            <a href="https://github.com/satyalaxminarasimha" target="_blank" rel="noopener noreferrer" class="project__link" aria-label="View source for Full-Stack ERP System">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M8 7h9v9"/></svg>
             </a>
-            <div class="mt-12 flex justify-center gap-6">
-                <a href="https://www.linkedin.com/in/satya2812/" target="_blank" class="text-slate-400 hover:text-indigo-400 transition-colors duration-300">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg>
-                </a>
-                <a href="https://github.com/satyalaxminarasimha" target="_blank" class="text-slate-400 hover:text-indigo-400 transition-colors duration-300">
-                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg>
-                </a>
-            </div>
-        </section>
+          </div>
+          <h3 class="project__title">Full-Stack ERP System</h3>
+          <p class="project__desc">
+            A scalable Enterprise Resource Planning application with real-time inventory tracking,
+            automated reporting, and secure JWT authentication.
+          </p>
+          <ul class="project__stack mono"><li>React</li><li>Node.js</li><li>MongoDB</li><li>JWT</li></ul>
+        </article>
 
-    </main>
+        <article class="project">
+          <div class="project__top">
+            <svg class="project__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h2v2h-2zM18 18h2v2h-2zM14 18h2M18 14h2"/></svg>
+            <a href="https://github.com/satyalaxminarasimha" target="_blank" rel="noopener noreferrer" class="project__link" aria-label="View source for QR Code Generator">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M8 7h9v9"/></svg>
+            </a>
+          </div>
+          <h3 class="project__title">QR Code Generator</h3>
+          <p class="project__desc">
+            A user-friendly desktop application with a graphical interface built in Tkinter &mdash;
+            a practical tool that turns a common need into a fast, focused solution.
+          </p>
+          <ul class="project__stack mono"><li>Python</li><li>Tkinter</li><li>GUI</li></ul>
+        </article>
+      </div>
 
-    <footer class="text-center py-8 text-slate-500">
-        <p>&copy; 2025 Karri Satya Laxmi Narasimha Murthy. All rights reserved.</p>
-    </footer>
+      <p class="projects__more">
+        <a href="https://github.com/satyalaxminarasimha?tab=repositories" target="_blank" rel="noopener noreferrer" class="link-arrow">
+          See all repositories on GitHub <span aria-hidden="true">&rarr;</span>
+        </a>
+      </p>
+    </section>
 
-    <script>
-        // Simple fade-in animation on scroll
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
+    <!-- ============ Experience ============ -->
+    <section class="section container reveal" id="experience" aria-labelledby="experience-title">
+      <header class="section__header">
+        <span class="section__num mono">03</span>
+        <h2 class="section__title" id="experience-title">Experience</h2>
+      </header>
 
-        document.querySelectorAll('.section-fade-in').forEach(section => {
-            observer.observe(section);
-        });
-    </script>
+      <ol class="timeline">
+        <li class="timeline__item">
+          <div class="timeline__date mono">May 2025 — Present</div>
+          <div class="timeline__body">
+            <h3 class="timeline__role">Freelance Software Developer <span class="timeline__org">· MERN Stack</span></h3>
+            <ul class="timeline__points">
+              <li>Developed and maintained a web-based ERP system end to end.</li>
+              <li>Designed secure RESTful APIs and robust frontend state management with Redux.</li>
+            </ul>
+            <ul class="tags tags--sm"><li>React</li><li>Redux</li><li>Node.js</li><li>Express</li><li>MongoDB</li></ul>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <div class="timeline__date mono">Jul 2022 — Jan 2023</div>
+          <div class="timeline__body">
+            <h3 class="timeline__role">Java Developer Intern <span class="timeline__org">· SV IT Solutions</span></h3>
+            <ul class="timeline__points">
+              <li>Built and tested core components for a high-transaction fraud detection system using Java and JSP.</li>
+              <li>Optimized performance and reduced alert review times.</li>
+            </ul>
+            <ul class="tags tags--sm"><li>Java</li><li>JSP</li><li>SQL</li></ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ Contact ============ -->
+    <section class="section container reveal contact" id="contact" aria-labelledby="contact-title">
+      <span class="section__num mono">04 — What's next?</span>
+      <h2 class="contact__title" id="contact-title">Let's build something together.</h2>
+      <p class="contact__text">
+        I'm always open to discussing new opportunities and collaborations. Whether you have a
+        role, a project, or just a question &mdash; my inbox is open.
+      </p>
+      <div class="contact__actions">
+        <a href="mailto:k.sathyam2003@gmail.com" class="btn btn--primary btn--lg">Say hello</a>
+        <button type="button" class="btn btn--ghost btn--lg" id="copy-email" data-email="k.sathyam2003@gmail.com">
+          <span class="mono">k.sathyam2003@gmail.com</span>
+          <span class="copy-label" aria-live="polite">Copy</span>
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>&copy; <span id="year">2025</span> Karri Satya Laxmi Narasimha Murthy</p>
+      <ul class="footer__social">
+        <li>
+          <a href="https://github.com/satyalaxminarasimha" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.492.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/satya2812/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:k.sathyam2003@gmail.com" aria-label="Email">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 6h18v12H3zM3 7l9 6 9-6"/></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
 </body>
 </html>
-
