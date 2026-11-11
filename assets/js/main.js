@@ -29,7 +29,7 @@
       toggle.focus();
     }
   });
-  window.matchMedia("(min-width: 821px)").addEventListener("change", (e) => {
+  window.matchMedia("(min-width: 901px)").addEventListener("change", (e) => {
     if (e.matches) setMenu(false);
   });
 
